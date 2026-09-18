@@ -1,0 +1,704 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    border-radius: 2px;
+    
+}
+
+body {
+    background-color: #fc1600;
+    color: black; 
+    font: normal 400 15px/1.5 "Arial", sans-serif;
+    letter-spacing: 0.2px;
+    max-width: 100%;
+    overflow-x: hidden;
+
+
+}
+
+
+/*
+=Popup
+============================================= */
+
+#popUp a:hover {
+    background-color: red;
+}
+
+#popUp {
+    position: fixed;
+    top: 0; left: 0;
+    margin: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0, 0.5); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(50px); 
+    z-index: 1000;
+}
+.popup-wrapper {
+    position: relative;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(255, 105, 235);
+    padding-bottom: 30px;
+    border: 1.5px solid ;
+    border-bottom: 3px solid ;
+    border-left: 3px solid ;
+    border-color: black;
+
+}
+
+.popup-wrapper div.body-wrapper {
+margin: 12px;
+}
+
+h1 {
+padding: 4px 26px 4px 26px ;
+background-color:yellow;
+letter-spacing: -0.02em;
+color: red;
+-webkit-text-stroke: 1.5px black; 
+text-align: center;
+border-bottom: 3px solid black;
+font: normal 900 60px/0.9 "Arial Narrow", sans-serif;
+
+}
+h2 {
+    padding: 8px 0px 8px 0px ;
+    color: black;
+    text-transform: uppercase;
+    font: normal 800 18px/1.2 "Arial", sans-serif;
+    letter-spacing: 0.05em;
+}
+h2 a {
+    color: rgb(73, 64, 203);
+}
+
+p {
+    color: black;
+    padding: 10px 0px;
+}
+p span {
+ font-weight: 600;
+}
+
+button {
+      /* Reset default browser styles */
+  background: linear-gradient(aqua, rgb(0, 102, 255));
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+  font: normal 900 28px/1.5 "Arial Narrow", sans-serif;
+  color: black;
+  cursor: pointer; /* Changes cursor to hand tool on hover */
+  
+  /* Layout & Sizing */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  
+  /* Smooth transitions for interactive states */
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(rgb(101, 253, 253), rgb(0, 255, 94))
+}
+
+
+.accordion-buttons {
+    background-color: aqua;
+}
+/*
+=MANIFESTO
+============================================= */
+.mag-wrapper {
+    display: flex;
+    width: 100vw;
+}
+
+.mag-wrapper img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.manifesto {
+    width: (100% - 10px);
+    margin: 10px;
+    border: 1.5px solid black;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    background-color: aqua;
+
+}
+
+.manifesto h1 {
+    font: normal 900 200px/0.9 "Arial Narrow", sans-serif;
+}
+
+.manifesto p {
+    padding: 10px;
+    font: normal 900 100px/0.9 "Arial", sans-serif;
+    text-align:justify;
+}
+
+
+
+
+
+/*
+=NAV
+============================================= */
+
+nav {
+    width: (100% - 10px);
+    height: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-y: visible;
+    overflow-x: visible;
+
+
+    background-color: rgb(255, 105, 235);
+    margin: 10px;
+    padding: 12px 12px 12px 12px;
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+
+    z-index: 500;
+
+
+}
+
+nav > a , .accordion-2-wrapper {
+    width: 25%;
+}
+
+.rotate-wrapper-1, .rotate-wrapper-2 {
+    width: max-content;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: black;
+    font: normal 900 40px/1.5 "Arial Narrow", sans-serif;
+}
+
+.accordion-1-wrapper {
+    width: 50%;
+}
+
+.chevron-1:hover > .rotate-wrapper-1, .chevron-2:hover > .rotate-wrapper-2{
+    color: red;
+    -webkit-text-stroke: 1.5px black; 
+}
+
+#logo {
+    fill: black;
+    width: 140px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+svg:first-of-type ~ svg {
+    display: none;
+
+}
+#logo:hover {
+    fill: red;
+    stroke: black;       /* Sets the color of the outline */
+  stroke-width: 7px; 
+}
+
+nav > a:hover {
+    background-color: none;
+}
+
+
+/*
+=Buy Now
+============================================= */
+.page {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+.page img { 
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    object-position: center;
+    z-index: 1;
+}
+
+.buyhere {
+    background-color: rgb(255, 105, 235);
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    margin: 10px;
+    margin-left: 60%;
+    z-index: 2;
+    /* box-shadow: 0px 0px 50px 10px yellow; */
+
+
+}
+.buyhere h1 {
+
+    font-size: 60px;
+}
+
+.buyhere h2 {
+    
+    font: normal 800 40px/1.5 "Brush Script MT", "Mr Dafoe", cursive, sans-serif;
+    text-transform: none;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    letter-spacing: 0em;
+
+}
+
+.buyhere button {
+    width: 100%;
+    font: normal 900 50px/1.5 "Arial Narrow", sans-serif;
+    animation: sharpColorBlink 1.5s steps(1, start) infinite;
+}
+@keyframes sharpColorBlink {
+  0%, 100% {
+    background: linear-gradient(rgb(101, 253, 253), rgb(0, 255, 94));
+  }
+  50% {
+    background: linear-gradient(rgb(252, 19, 19), magenta);
+  }
+}
+.buyhere .button-wrapper {
+    padding: 11px;
+}
+
+.buyhere button:hover {
+    box-shadow: 0px 0px 50px 10px rgb(255, 192, 242);
+}
+
+/*
+=Footer
+============================================= */
+
+.belt {
+    display: flex;
+    width: 100vw;
+}
+.belt img {
+    width: 100%;
+}
+
+.logo {
+    width: 100%;
+    margin-top: -76px;
+}
+
+
+
+.aqua-wrapper {
+    display: flex;
+    background-color: rgb(255, 105, 235);
+    width: 100%;
+    padding: 0px;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content:inherit;
+}
+
+.quick-links a {
+    width: fit-content;
+    color: black;
+    text-transform: uppercase;
+    font: normal 800 18px/1.2 "Arial", system-ui, sans-serif;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    background-color: red;
+}
+
+
+
+
+
+
+/*
+=Accordion1
+============================================= */
+.accordion-1 {
+    margin: 75px 5px 5px 5px;
+    background-color: transparent;
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    color: transparent;
+    height: 0px;
+    overflow-y: hidden;
+
+}
+
+input#chevron-1:checked ~ .accordion-1 {
+    background-color:orange;
+    color: black;
+    height: 500px;
+    overflow: scroll;
+    padding: 0px 12px 12px 12px;
+    }
+
+
+
+/*
+=Accordion2
+============================================= */
+.accordion-2 {
+    margin: 75px 5px 5px 5px;
+    background-color: transparent;
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    color: transparent;
+    height: 0px;
+    overflow-y: hidden;
+
+}
+
+input#chevron-2:checked ~ .accordion-2 {
+    background-color:lawngreen;
+    color: black;
+    height: fit-content;
+    height: 500px;
+    overflow: scroll;
+    padding: 0px 12px 12px 12px;
+}
+
+.accordion-1 a, .accordion-2 a {
+    color: rgb(73, 64, 203);
+}
+
+
+.accordion-2 a:hover, .accordion-1 a:hover {
+    background-color: red;
+}
+
+
+
+
+/*
+=Checkbox
+============================================= */
+input {
+    display: none;
+}
+
+
+/*
+=Chevron Container
+============================================= */
+.chevron-1 {
+  position: absolute;
+  width: auto; height: 35px;
+  padding: 5px;
+  transform: translate(8.5px, -7px);
+}
+.chevron-2 {
+  position: absolute;
+  width: auto; height: 35px;
+  padding: 5px;
+  transform: translate(8.5px, -7px);
+}
+
+/*
+=Label + Rotate Wrapper
+============================================= */
+.chevron-1 .rotate-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.chevron-1 label {
+  background-color: lightskyblue;
+  position: absolute;
+  width: 100%; height: 70px;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chevron-2 .rotate-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.chevron-2 label {
+  background-color: lightskyblue;
+  position: absolute;
+  width: 100%; height: 70px;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/*
+=Label + Rotate Wrapper
+============================================= */
+
+
+@media (max-width: 768px) {
+  .page img { 
+    margin-top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    object-fit: cover; 
+    object-position: left;
+    z-index: 1;
+}
+
+.manifesto h1 {
+    font: normal 900 60px/0.9 "Arial Narrow", sans-serif;
+}
+.manifesto p {
+    padding: 10px;
+    font: normal 900 40px/0.9 "Arial", sans-serif;
+    text-align:justify;
+}
+
+.buyhere {
+    background-color: rgb(255, 105, 235);
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    margin: 10px;
+    margin-left: 10px;
+    z-index: 2;
+    /* box-shadow: 0px 0px 50px 10px yellow; */
+
+
+}
+
+
+.buyhere h2 {
+    font: normal 800 30px/1.5 "Brush Script MT", "Mr Dafoe", cursive, sans-serif;
+    text-transform: none;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+
+}
+
+.buyhere button {
+    font: normal 900 30px/0.9 "Arial Narrow", sans-serif;
+}
+
+
+.popup-wrapper {
+    width: 300px;
+    padding-bottom: 20px;
+
+}
+
+h1 {
+padding: 4px 26px 4px 26px ;
+background-color:yellow;
+letter-spacing: -0.02em;
+color: red;
+-webkit-text-stroke: 1.5px black; 
+text-align: center;
+border-bottom: 3px solid black;
+font: normal 900 40px/0.9 "Arial Narrow", sans-serif;
+
+}
+h2 {
+    
+    font: normal 800 14px/1.2 "Arial", sans-serif;
+}
+
+p {
+    font-size: 12px;
+}
+
+
+
+.logo {
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+
+.aqua-wrapper {
+    width: 100%;
+    display:block;
+    background-color: rgb(255, 105, 235);
+    padding: 10px;
+}
+
+.quick-links {
+    margin: 0px;
+    padding: 0px 6px 12px 6px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.quick-links a {
+    width: fit-content;
+    color: black;
+    text-transform: uppercase;
+    font: normal 800 18px/1.2 "Arial", system-ui, sans-serif;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+nav {
+    width: (100% - 10px);
+    height: fit-content;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+    background-color: rgb(255, 105, 235);
+    margin: 10px;
+    padding: 12px 12px 0px 12px;
+    border: 1.5px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+
+    z-index: 500;
+
+
+}
+
+nav > a , .accordion-2-wrapper {
+    width: 100%;
+}
+
+.rotate-wrapper-1, .rotate-wrapper-2 {
+    width: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font: normal 900 20px/1.5 "Arial Narrow", sans-serif;
+    margin-left: -26px;
+    overflow-y: hidden;
+}
+
+.accordion-1-wrapper {
+    width: 100%;
+}
+
+.accordion-1 {
+    margin: 30px 0px 10px 0px;
+
+}
+.accordion-2 {
+    margin: 30px 0px 10px 0px;
+
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    fill: black;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 12px;
+
+}
+svg:first-of-type ~ svg {
+    display: flex;
+
+}
+.chevron-1 {
+  position: absolute;
+  width: 100%; height: 35px;
+  padding: 5px;
+  transform: translate(8.5px, -7px);
+}
+.chevron-2 {
+  position: absolute;
+  width: 100%; height: 35px;
+  padding: 5px;
+  transform: translate(8.5px, -7px);
+}
+
+.chevron-1 label {
+  background-color: lightskyblue;
+  position: absolute;
+  width: 100%; height: 70px;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.chevron-2 label {
+  background-color: lightskyblue;
+  position: absolute;
+  width: 100%; height: 70px;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input#chevron-1:checked ~ .accordion-1 {
+
+    height: fit-content;
+    overflow: scroll;
+    padding: 0px 12px 12px 12px;
+    }
+
+    input#chevron-2:checked ~ .accordion-2 {
+
+    height: fit-content;
+    overflow: scroll;
+    padding: 0px 12px 12px 12px;
+    }
+
+    .buyhere button:hover {
+    box-shadow: none;
+}
+
+.mag-wrapper img {
+    height: 400px;
+}
+
+
+}
+
+
